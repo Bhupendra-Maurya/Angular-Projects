@@ -1,0 +1,7 @@
+<div class="button-container">
+    <h1>Child Component</h1>
+    <button *ngFor="let item of items" (click)="sendSelectedItems(item.name)" class="item-button">
+      {{ item.name }}
+    </button>
+  </div>
+  

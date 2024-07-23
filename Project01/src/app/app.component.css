@@ -1,0 +1,48 @@
+.parent-container {
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+  }
+  
+  h1 {
+    color: #333;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    color: #666;
+    font-size: 1.5em;
+    margin: 20px 0;
+  }
+  
+  .selected-item {
+    color: #007bff;
+    font-size: 1.2em;
+    margin: 10px 0;
+    font-weight: bold;
+  }
+  
+  .button-group {
+    margin: 20px 0;
+  }
+  
+  .filter-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+  }
+  
+  .filter-button:hover {
+    background-color: #0056b3;
+  }
+  

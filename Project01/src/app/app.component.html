@@ -1,0 +1,17 @@
+<div class="parent-container">
+  <h1>Parent Component</h1>
+
+  <h3 *ngIf="item" class="selected-item">Selected Item is: {{ item }}</h3>
+
+  <h2>Filter by Type:</h2>
+  <div class="button-group">
+    <button (click)="filterByType('Color')" class="filter-button">Colors</button>
+    <button (click)="filterByType('Fruit')" class="filter-button">Fruits</button>
+    <button (click)="filterByType('Animal')" class="filter-button">Animals</button>
+  </div>
+
+  <app-child
+    [items]="filteredItems"
+    (selectedItem)="handleSelectedItems($event)"
+  ></app-child>
+</div>
