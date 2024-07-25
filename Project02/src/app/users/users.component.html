@@ -1,0 +1,53 @@
+<ul class="user-list">
+    <li *ngFor="let user of Users" (click)="SelectedUser(user)">
+      {{ user.name }}
+    </li>
+  </ul>
+  
+  <section *ngIf="userId" class="task-section">
+  <!-- <section  class="task-section"> -->
+    <h2>{{ userName }}'s Tasks</h2>
+    <ul class="task-list">
+      <li *ngFor="let task of tasks">
+        <h3>{{ task.title }}</h3>
+        <p>{{ task.summary }}</p>
+        <p>Due Date: {{ task.dueDate }}</p>
+      </li>
+    </ul>
+    <article>
+      <button class="add-task-button" (click)="showAddTaskDialog = true">
+        Add Task
+      </button>
+    </article>
+  </section>
+  
+  
+  <dialog [open]="showAddTaskDialog">
+  <!-- <dialog open> -->
+    <h2>Add Task</h2>
+    <form (ngSubmit)="addTask()">
+      <label>
+        Title:
+        <input type="text" [(ngModel)]="newTitle" name="title" required />
+      </label>
+      <label>
+        Summary:
+        <textarea
+          [(ngModel)]="newSummary"
+          name="summary"
+          required
+        ></textarea>
+      </label>
+      <label>
+        Due Date:
+        <input
+          type="date"
+          [(ngModel)]="newDueDate"
+          name="dueDate"
+          required
+        />
+      </label>
+      <button type="submit">Create</button>
+      <button type="button" (click)="closeAddTaskDialog()">Cancel</button>
+    </form>
+  </dialog>

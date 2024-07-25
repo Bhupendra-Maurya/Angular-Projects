@@ -1,0 +1,9 @@
+<h1>App Componenet</h1>
+<!-- <app-users [Users]="usersData"></app-users> -->
+
+<!-- <app-users [Users]="usersData"></app-users> -->
+<app-users
+  [Users]="usersData"
+  (userSelected)="filterTask($event)"
+  [tasks]="filterTasks"
+></app-users>
