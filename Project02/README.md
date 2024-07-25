@@ -1,27 +1,45 @@
-# Project02
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.2.
 
-## Development server
+# TaskMaster
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+TaskMaster is an Angular-based user and task management system designed to simplify the process of managing tasks assigned to different users. This project demonstrates the use of Angular components, event handling, data binding, and local storage to maintain data persistence.
 
-## Code scaffolding
+## Features
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- **User Management**: Displays a list of users, allowing you to select a user to view their tasks.
+- **Task Management**: Shows tasks associated with the selected user, including task details such as title, summary, and due date.
+- **Add New Tasks**: Provides a form to add new tasks for the selected user, with inputs for task title, summary, and due date.
+- **Persistent Storage**: Uses local storage to save tasks, ensuring data is not lost on page refresh.
 
-## Build
+## Project Structure
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- **Components**: The project is divided into reusable Angular components.
+  - `AppComponent`: Main component that initializes user data and handles task filtering.
+  - `UsersComponent`: Manages the display and selection of users, as well as task management for the selected user.
 
-## Running unit tests
+## How to Use
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. **User Selection**: Click on a user from the list to view their tasks.
+2. **View Tasks**: The selected user's tasks will be displayed, showing details such as the task title, summary, and due date.
+3. **Add Tasks**: Click the "Add Task" button to open a form where you can enter new task details. Submit the form to add the task to the selected user's task list.
 
-## Running end-to-end tests
+## Technologies Used
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- **Angular**: For building the front-end application.
+- **TypeScript**: For type-safe JavaScript.
+- **HTML & CSS**: For structuring and styling the application.
+- **Local Storage**: For storing and persisting task data across page reloads.
 
-## Further help
+## Getting Started
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+1. **Install Dependencies**: `npm install`
+2. **Install Angular CLI**: `npm install -g @angular/cli`
+3. **Run the Application**: `ng serve`
+4. **Open in Browser**: Navigate to `http://localhost:4200/` to view the application.
+
+## Future Enhancements
+
+- **User Authentication**: Adding user login functionality to personalize task management.
+- **Task Editing**: Allowing users to edit existing tasks.
+- **Task Deletion**: Adding the ability to delete tasks.
+- **Filtering and Sorting**: Implementing filters and sorting options for tasks.
